@@ -1,3 +1,10 @@
+import { SearchBar } from "../components/SearchBar"
+
 export default function Home() {
-    return <h1>Search For Projects</h1>
+    return (
+        <div>
+            <h1>Search For Projects</h1>
+            <SearchBar />
+        </div>
+    )
 }

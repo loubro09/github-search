@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtuell miljö
+venv/
+.env/
+.env
+
+# Environment variables
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / distributions
+dist/
+build/
+*.egg-info/
+
+# SQLite (om du lägger till databas senare)
+*.db
+
+# Test / coverage (senare)
+.coverage
+htmlcov/

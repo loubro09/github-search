@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
             { index: true, element: <Home />},
             { path: "results", element: <Results />},
             { path: "saved", element: <Saved /> },
-            { path: "repo/:id", element: <Repo />},
+            { path: "repo/:owner/:repo", element: <Repo />},
         ]
     }
 ])

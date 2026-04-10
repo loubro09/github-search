@@ -9,6 +9,9 @@ type Repo = {
     id: number;
     name: string;
     description: string | null;
+    owner: {
+        login: string;
+    };
 };
 
 export default function Results() {
@@ -20,7 +23,7 @@ export default function Results() {
     const [repos, setRepos] = useState<Repo[]>([]);
 
     function handleClickRepo(repo: Repo) {
-        navigate(`/repo/${repo.id}`);
+        navigate(`/repo/${repo.owner.login}/${repo.name}`)
     }
 
     useEffect(() => {

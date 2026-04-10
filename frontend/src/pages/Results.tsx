@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom"
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { SearchBar } from "../components/SearchBar"
 import { searchRepos } from "../api/search";
@@ -11,10 +12,16 @@ type Repo = {
 };
 
 export default function Results() {
+    const navigate = useNavigate();
+
     const [searchParams] = useSearchParams();
     const query = searchParams.get("q");
 
     const [repos, setRepos] = useState<Repo[]>([]);
+
+    function handleClickRepo(repo: Repo) {
+        navigate(`/repo/${repo.id}`);
+    }
 
     useEffect(() => {
         async function load() {
@@ -28,7 +35,11 @@ export default function Results() {
 
     const list_repos = repos.map(repo =>
         <div key={repo.id}>
-            <p>{repo.name}</p>
+            <button
+                onClick={() => {handleClickRepo(repo)}}
+            >
+                {repo.name}
+            </button>
             <p>{repo.description ?? "No description"}</p>
         </div>
     )

@@ -64,8 +64,8 @@ def transformRepo(data):
 
 
 @app.get("/api/search")
-def search(q: str):
-    response = requests.get(f"{githubBaseApi}/search/repositories?q={q}")
+def search(q: str, page: int = 1):
+    response = requests.get(f"{githubBaseApi}/search/repositories?q={q}&page={page}&per_page=10")
     data = response.json()
     items = data["items"]
     return transformResult(items)

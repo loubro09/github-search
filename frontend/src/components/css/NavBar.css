@@ -1,0 +1,19 @@
+.navbar {
+    background-color: rgb(243, 241, 234);
+}
+
+.navbar-container {
+    padding: 2rem;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    margin: 2rem;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-container h1 {
+    color: rgb(250, 150, 0);
+    margin-top: 3rem;
+}

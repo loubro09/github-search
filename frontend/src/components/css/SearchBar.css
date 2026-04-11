@@ -1,0 +1,39 @@
+.searchBar {
+    align-items: center;
+    background-color: white;
+    border-radius: 1.5rem;
+    display: inline-flex;
+    padding: 1rem;
+    border: 3px solid transparent;
+    width: 50vw;
+    height: 3vh;
+    transition: border 0.8s ease;
+}
+
+.searchBar form {
+    width: 100%;
+}
+
+.searchBar:focus-within {
+    border: 3px solid rgb(70, 97, 205);
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    font-size: large;
+    float:inline-start;
+}
+
+.searchBar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    float:inline-end;
+    transition: color 0.8s ease;
+}
+
+.searchBar:focus-within button {
+    color: rgb(70, 97, 205);
+}
